@@ -1,0 +1,14 @@
+authtoken: 2N8hFNiucpBa3nAxXI9Xpwuws92_24YuZvQhphYYU5E8PRUQA
+region: eu
+version: 2
+tunnels:
+  livestatus:
+    addr: mlrmonitoring:6557
+    proto: tcp
+  monitoringgui:
+    addr: mlrmonitoring:5000
+    proto: http
+  guacd:
+    proto: tcp
+    addr: guacd:4822
+
