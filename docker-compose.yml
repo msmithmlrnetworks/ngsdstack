@@ -8,10 +8,10 @@ services:
     ulimits:
       nofile: 1024
     volumes:
-      - ./monitoring:/omd/sites
+      - ./livvman:/omd/sites
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - "8080:5000"
+      - "5000:5000"
       - "6557:6557"
     environment:
       - CMK_SITE_ID=livvman
@@ -19,20 +19,30 @@ services:
       - CMK_LIVESTATUS_TCP=on
     restart: unless-stopped
     networks:
-      - traefik-hub
-
+      - guacnetwork_compose
+  guacd:
+    container_name: guacd
+    image: guacamole/guacd
+    networks:
+      guacnetwork_compose:
+    restart: always
+    volumes:
+    - ./drive:/drive:rw
+    - ./record:/record:rw
   ngrok:
     image: ngrok/ngrok:alpine
     container_name: ngrok
     networks: 
-      - traefik-hub
+      - guacnetwork_compose
     volumes:
       - ./ngrok.yaml:/etc/ngrok.yaml
     environment:
       - NGROK_CONFIG=/etc/ngrok.yaml
     depends_on:
       - checkmk
+    restart: unless-stopped
 volumes:
     data:
 networks:
-  traefik-hub: {}
+  guacnetwork_compose:
+    driver: bridge
