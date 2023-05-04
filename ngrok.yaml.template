@@ -3,12 +3,15 @@ region: eu
 version: 2
 tunnels:
   livestatus:
-    addr: mlrmonitoring:6557
+    addr: checkmk:6557
     proto: tcp
+    metadata: "mlrnewbald"
   monitoringgui:
-    addr: mlrmonitoring:5000
+    addr: checkmk:5000
     proto: http
+    metadata: "mlrnewbald"
   guacd:
     proto: tcp
     addr: guacd:4822
+    metadata: "mlrnewbald"
 
