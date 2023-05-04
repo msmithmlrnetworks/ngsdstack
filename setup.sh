@@ -16,4 +16,4 @@ sed "s|old_value|$new_value|g" "docker-compose.yml.template" > "docker-compose.y
 sed "s|old_value|$new_value|g" "ngrok.yaml.template" > "ngrok.yaml"
 
 
-echo "Value successfully updated! Now use the following command to start the container: docker-compose up -d"
+echo "Value successfully updated! Now use the following command to start the container: sudo docker-compose up -d"

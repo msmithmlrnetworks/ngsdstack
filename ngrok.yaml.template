@@ -5,13 +5,13 @@ tunnels:
   livestatus:
     addr: checkmk:6557
     proto: tcp
-    metadata: "mlrnewbald"
+    metadata: "old_value"
   monitoringgui:
     addr: checkmk:5000
     proto: http
-    metadata: "mlrnewbald"
+    metadata: "old_value"
   guacd:
     proto: tcp
     addr: guacd:4822
-    metadata: "mlrnewbald"
+    metadata: "old_value"
 
