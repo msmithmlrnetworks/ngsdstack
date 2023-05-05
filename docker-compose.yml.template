@@ -2,7 +2,7 @@ version: '2.1'
 services:
   checkmk:
     container_name: checkmk
-    image: registry.checkmk.com/enterprise/check-mk-enterprise:2.2.0b2
+    image: registry.checkmk.com/enterprise/check-mk-enterprise:2.1.0p27
     tmpfs:
       - /opt/omd/sites/cmk/tmp:uid=1000,gid=1000
     ulimits:
