@@ -17,5 +17,5 @@ tunnels:
   firefox:
     labels:
       - edge=edghts_2Pb3i5FvUfqxUh2dbsF73PS1V1x
-    addr: https://localhost:3001
+    addr: http://localhost:3001
     metadata: '{"customerName": "old_value","service": "firefox"}'
