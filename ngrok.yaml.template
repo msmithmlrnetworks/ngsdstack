@@ -18,4 +18,5 @@ tunnels:
     labels:
       - edge=edghts_2Pb3i5FvUfqxUh2dbsF73PS1V1x
     addr: firefox:3001
+    proto: https
     metadata: '{"customerName": "old_value","service": "firefox"}'
