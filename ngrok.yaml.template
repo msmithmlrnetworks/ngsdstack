@@ -10,6 +10,7 @@ tunnels:
     addr: checkmk:5000
     proto: http
     metadata: '{"customerName": "old_value","service": "monitoringgui"}'
+    domain: mlrnetworks.ngrok.app
   guacd:
     proto: tcp
     addr: guacd:4822
