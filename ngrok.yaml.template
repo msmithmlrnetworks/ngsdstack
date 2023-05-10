@@ -10,9 +10,12 @@ tunnels:
     addr: checkmk:5000
     proto: http
     metadata: '{"customerName": "old_value","service": "monitoringgui"}'
-    domain: mlrnetworks.ngrok.app
   guacd:
     proto: tcp
     addr: guacd:4822
     metadata: '{"customerName": "old_value","service": "guacd"}'
-
+  firefox:
+    proto: http
+    addr: firefox:3001
+    labels: 
+      - edge=edghts_2Pb3i5FvUfqxUh2dbsF73PS1V1x
