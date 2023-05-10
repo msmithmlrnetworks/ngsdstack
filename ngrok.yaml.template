@@ -15,7 +15,9 @@ tunnels:
     addr: guacd:4822
     metadata: '{"customerName": "old_value","service": "guacd"}'
   firefox:
+    labels:
+      - region=eu
+      - edge=edghts_2Pb3i5FvUfqxUh2dbsF73PS1V1x
     proto: http
     addr: firefox:3001
-    label: 
-      - edge=edghts_2Pb3i5FvUfqxUh2dbsF73PS1V1x
+    metadata: '{"customerName": "old_value","service": "firefox"}'
