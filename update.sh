@@ -1,5 +1,11 @@
 
-read -p "Enter the customer name: " new_value
+read -p "Enter the customer name EXACTLY as it appears in Vivantio: " new_value
+
+# Remove spaces and special characters
+clean=$(echo "$new_value" | tr -cd '[:alnum:]-')
+
+# Replace remaining spaces with hyphens
+clean=$(echo "$clean" | tr ' ' '-')
 
 # # Remove leading/trailing spaces
 # new_value="$(echo -e "${new_value}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
@@ -13,7 +19,8 @@ read -p "Enter the customer name: " new_value
 # Replace value in file
 sed "s|old_value|$new_value|g" "docker-compose.yml.template" > "docker-compose.yml"
 sed "s|old_value|$new_value|g" "ngrok.yaml.template" > "ngrok.yaml"
-
+sed "s|old_engine_value|$clean|g" "docker-compose.yml.template" > "docker-compose.yml"
+sed "s|old_engine_value|$clean|g" "ngrok.yaml.template" > "ngrok.yaml"
 
 echo "Value successfully updated! Now use the following commands to start the stack:"
 echo "'sudo apt install docker-compose'"

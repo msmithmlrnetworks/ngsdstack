@@ -5,11 +5,11 @@ tunnels:
   livestatus:
     addr: checkmk:6557
     proto: tcp
-    metadata: '{"customerName": "old_value","service": "livestatus"}'
+    metadata: '{"customerName": "old_value","service": "livestatus","monitoringEngineName": "old_engine_value"}'
   monitoringgui:
     addr: checkmk:5000
     proto: http
-    metadata: '{"customerName": "old_value","service": "monitoringgui"}'
+    metadata: '{"customerName": "old_value","service": "monitoringgui","monitoringEngineName": "old_engine_value"}'
   guacd:
     proto: tcp
     addr: guacd:4822
