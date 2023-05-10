@@ -7,6 +7,8 @@ clean=$(echo "$new_value" | tr -cd '[:alnum:]-')
 # Replace remaining spaces with hyphens
 clean=$(echo "$clean" | tr ' ' '-')
 
+clean_string=${clean:0:16}
+
 # # Remove leading/trailing spaces
 # new_value="$(echo -e "${new_value}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
@@ -17,8 +19,8 @@ clean=$(echo "$clean" | tr ' ' '-')
 # fi
 
 # Replace value in file
-sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "docker-compose.yml.template" > "docker-compose.yml"
-sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "ngrok.yaml.template" > "ngrok.yaml"
+sed "s|old_value|$new_value|g; s|old_engine_value|$clean_string|g" "docker-compose.yml.template" > "docker-compose.yml"
+sed "s|old_value|$new_value|g; s|old_engine_value|$clean_string|g" "ngrok.yaml.template" > "ngrok.yaml"
 echo $clean
 echo $new_value
 echo "Value successfully updated! Now use the following commands to start the stack:"
