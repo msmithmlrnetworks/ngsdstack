@@ -7,7 +7,7 @@ clean=$(echo "$new_value" | tr -cd '[:alnum:]-')
 # Replace remaining spaces with hyphens
 clean=$(echo "$clean" | tr ' ' '-')
 
-clean_string=${clean:0:16}
+clean=${clean:0:16}
 
 # # Remove leading/trailing spaces
 # new_value="$(echo -e "${new_value}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
