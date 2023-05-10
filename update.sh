@@ -1,4 +1,4 @@
-
+#!/bin/bash
 read -p "Enter the customer name EXACTLY as it appears in Vivantio: " new_value
 
 # Remove spaces and special characters
