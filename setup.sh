@@ -15,5 +15,6 @@ echo $clean
 echo $new_value
 echo "Value successfully updated! Now use the following commands to start the stack:"
 echo "'sudo apt install docker-compose'"
-echo "'sudo docker login registry.checkmk.com' and enter the credentials. Then:"
+echo "'sudo docker login registry.checkmk.com' and enter the credentials."
+echo "'Then:'"
 echo "'sudo docker-compose up -d'"
