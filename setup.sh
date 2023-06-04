@@ -1,6 +1,11 @@
 #!/bin/bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
+#Add ThousandEyes Docker Configurations
+curl -Os https://downloads.thousandeyes.com/bbot/configure_docker.sh
+chmod +x configure_docker.sh
+sudo ./configure_docker.sh
+
 read -p "Enter the customer name EXACTLY as it appears in Vivantio: " new_value
 # Extract the first word before any spaces
 clean=$(echo "$new_value" | cut -d' ' -f1)

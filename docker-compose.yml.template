@@ -59,7 +59,7 @@ services:
     cap_add:
       - "SYS_ADMIN"
       - "NET_ADMIN"
-    container_name: old_value
+    container_name: old_engine_value
     restart: unless-stopped
     image: thousandeyes/enterprise-agent
     entrypoint: /sbin/my_init
