@@ -20,7 +20,7 @@ Detailed instructions are below.
  Pull the repo using git pull and then change directory into the new folder that has been created called ngsdstack.
  
 
-    git pull [repo link above]
+    git pull https://github.com/msmithmlrnetworks/ngsdstack.git
     cd ngsdstack
 
 Once in the folder excute the setup script by using the following command.
