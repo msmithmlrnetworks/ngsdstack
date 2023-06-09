@@ -1,4 +1,4 @@
-# NGSD Satellite configuartion tool
+# NGSD Satellite config tool
 This repo is used to configure the satellite service stack for the ngsd platform.
 
 There are two scripts that configure the template service descriptions contained for Docker-Compose and ngrok. 
