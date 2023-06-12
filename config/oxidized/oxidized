@@ -1,0 +1,60 @@
+
+username: vagrant
+password: vagrant
+model: junos
+interval: 3600
+use_syslog: true
+log: ./.config/oxidized/logs/
+debug: false
+rest: false
+threads: 30
+timeout: 20
+retries: 3
+prompt: !ruby/regexp /^([\w.@-]+[#>]\s?)$/
+next_adds_job: false
+pid: "/opt/oxidized/pid"
+
+input:
+  default: ssh
+  debug: false
+  ssh:
+    secure: false
+
+output:
+  file:
+    directory: /opt/oxidized/output/configs
+
+source:
+  default: http
+  http:
+    url: https://url/api
+    scheme: https
+    delimiter: !ruby/regexp /:/
+    user: username
+    pass: password
+    read_timeout: 120
+    map:
+      name: hostname
+      model: os
+      username: username
+      password: password
+    vars_map:
+      enable: enable
+    headers:
+      X-Auth-Token: 'somerandomstring'
+
+model_map:
+  juniper: junos
+  cisco: ios
+
+vars: {}
+
+groups:
+  juniper:
+    username: vagrant
+    password: Vagrant
+  cisco:
+    username: vagrant
+    password: vagrant
+
+models: {}

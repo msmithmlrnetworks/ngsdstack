@@ -77,6 +77,15 @@ services:
         - NAME=old_engine_value
         - TEAGENT_INET=4
         - TEAGENT_ACCOUNT_TOKEN=1upktmk8gau87bwgegvpa4n44vvr048u
+  oxidized:
+    restart: always
+    image: oxidized/oxidized:latest
+    ports:
+      - 8888:8888/tcp
+    environment:
+      CONFIG_RELOAD_INTERVAL: 600
+    volumes:
+       - ./config/oxidized:/home/oxidized/.config/oxidized/
 volumes:
     data:
 networks:
