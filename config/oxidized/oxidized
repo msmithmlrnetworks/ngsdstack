@@ -41,7 +41,7 @@ source:
     vars_map:
       enable: enable
     headers:
-      X-Auth-Token: 'somerandomstring'
+      X-Auth-Token: '``````'
 
 model_map:
   juniper: junos
