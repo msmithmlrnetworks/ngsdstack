@@ -19,6 +19,7 @@ clean=$(echo "$clean" | tr -cd '[:alnum:]')
 # Replace value in file
 sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "docker-compose.yml.template" > "docker-compose.yml"
 sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "ngrok.yaml.template" > "ngrok.yaml"
+sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "./config/ngrok/ngrok.yaml.template" > "./config/ngrok/ngrok.yaml"
 echo $clean
 echo $new_value
 echo "Value successfully updated! Now use the following commands to start the stack:"
