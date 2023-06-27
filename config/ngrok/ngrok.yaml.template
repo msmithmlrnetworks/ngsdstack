@@ -2,7 +2,7 @@ authtoken: 2N8hFNiucpBa3nAxXI9Xpwuws92_24YuZvQhphYYU5E8PRUQA
 region: eu
 version: 2
 tunnels:
-  ngsdCli:
+  ngsdcli:
     addr: 22
     proto: tcp
     metadata: '{"customerName": "old_value","service": "ngsdCli"}'
