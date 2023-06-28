@@ -10,6 +10,7 @@ services:
     volumes:
       - ./old_engine_value:/omd/sites
       - /etc/localtime:/etc/localtime:ro
+      - ./ngsd-notification/notification.py:/opt/omd/sites/cmk/var/check_mk/notifications/notification.py
     ports:
       - "5000:5000"
       - "6557:6557"
