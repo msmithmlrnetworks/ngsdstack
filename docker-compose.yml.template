@@ -2,6 +2,11 @@ version: '2.1'
 services:
   checkmk:
     container_name: checkmk
+    command: >
+      bash -c "set -e;
+      echo 'Initialize plugins...';
+      chmod 755 /omd/sites/old_engine_value/share/check_mk/notifications/notification.sh;
+      /docker-entrypoint.sh"
     image: registry.checkmk.com/enterprise/check-mk-enterprise:latest
     tmpfs:
       - /opt/omd/sites/cmk/tmp:uid=1000,gid=1000
@@ -10,7 +15,8 @@ services:
     volumes:
       - ./old_engine_value:/omd/sites
       - /etc/localtime:/etc/localtime:ro
-      - ./ngsd-notification:/omd/sites/cmk/share/check_mk/notifications
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./ngsd-notifcation/notification.py:/omd/sites/old_engine_value/share/check_mk/notifications/notification.py
     ports:
       - "5000:5000"
       - "6557:6557"
