@@ -19,7 +19,7 @@ clean=$(echo "$clean" | tr -cd '[:alnum:]')
 sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "./config/ngrok/ngrok.yaml.template" > "./config/ngrok/ngrok.yaml"
 
 cp ./config/ngrok/ngrok.yml ~/.config/ngrok/ngrok.yml
-sudo ngrok service install --config ./config/ngrok/ngrok.yml
+sudo ngrok service install --config config/ngrok/ngrok.yml
 sudo ngrok service start
 
 
