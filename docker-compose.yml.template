@@ -5,7 +5,7 @@ services:
     command: >
       bash -c "set -e;
       echo 'Initialize plugins...';
-      chmod 755 /omd/sites/old_engine_value/share/check_mk/notifications/notification.sh;
+      chmod 755 /omd/sites/old_engine_value/share/check_mk/notifications/notification.py;
     image: registry.checkmk.com/enterprise/check-mk-enterprise:latest
     tmpfs:
       - /opt/omd/sites/cmk/tmp:uid=1000,gid=1000
