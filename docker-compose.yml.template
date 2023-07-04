@@ -37,14 +37,15 @@ services:
     - ./drive:/drive:rw
     - ./record:/record:rw
   firefox:
-    image: lscr.io/linuxserver/firefox:latest
+    image: jlesage/firefox:latest
     container_name: firefox
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
+      - VNC_PASSWORD=Pa55p0rt
     ports:
-      - 3001:3001
+      - 5900:5900
     shm_size: "1gb"
     restart: unless-stopped
   ngrok:
