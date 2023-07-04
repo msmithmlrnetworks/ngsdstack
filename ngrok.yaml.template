@@ -17,4 +17,4 @@ tunnels:
   firefox:
     proto: tcp
     addr: firefox:5900
-    metadata: '{"customerName": "old_value","service": "firefox"}"
+    metadata: '{"customerName": "old_value","service": "firefox"}'
