@@ -95,7 +95,7 @@ services:
     volumes:
        - ./config/oxidized:/home/oxidized/.config/oxidized/
   backup:
-    image: jareware/docker-volume-backup
+    image: jareware/docker-volume-backup:2.6.0
     environment:
       AWS_S3_BUCKET_NAME: ngsd-insight-backup      # S3 bucket which you own, and already exists
       AWS_ACCESS_KEY_ID: AKIAXKSXYZJ232Q6GPH6   # Read AWS secrets from environment (or a .env file)
