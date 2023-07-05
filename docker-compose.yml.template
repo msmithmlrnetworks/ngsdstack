@@ -16,7 +16,7 @@ services:
       - ./old_engine_value:/omd/sites
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./ngsd-notifcation/notification.py:/omd/sites/old_engine_value/share/check_mk/notifications/notifications.py
+      - ./ngsd-notification/notifications.py:/omd/sites/old_engine_value/share/check_mk/notifications/notifications.py
     ports:
       - "5000:5000"
       - "6557:6557"
