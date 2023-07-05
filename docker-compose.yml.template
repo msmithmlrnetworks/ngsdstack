@@ -94,6 +94,16 @@ services:
       CONFIG_RELOAD_INTERVAL: 600
     volumes:
        - ./config/oxidized:/home/oxidized/.config/oxidized/
+  backup:
+    image: jareware/docker-volume-backup
+    environment:
+      AWS_S3_BUCKET_NAME: ngsd-insight-backup      # S3 bucket which you own, and already exists
+      AWS_ACCESS_KEY_ID: AKIAXKSXYZJ232Q6GPH6   # Read AWS secrets from environment (or a .env file)
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      BACKUP_FILENAME: latest.tar.gz
+    volumes:
+      - ./old_engine_value:/backup/old_engine_value:ro    # Mount the Grafana data volume (as read-only)
+
 volumes:
     data:
 networks:
