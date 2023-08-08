@@ -32,9 +32,6 @@ Once in the folder excute the setup script by using the following command.
  NOTE: Ensure that this matches the customer name in vivantio exactly.
 
     Enter the customer name EXACTLY as it appears in Vivantio:
-You will then need to install Docker-Compose.
-
-    sudo apt install docker-compose
 Then login to the Check MK repository.
 
     sudo docker login registry.checkmk.com

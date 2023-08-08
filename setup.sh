@@ -21,7 +21,7 @@ sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "./config/ngrok/ngro
 cp ./config/ngrok/ngrok.yml ~/.config/ngrok/ngrok.yml
 sudo ngrok service install --config config/ngrok/ngrok.yml
 sudo ngrok service start
-
+sudo apt install docker-compose
 
 # Replace value in file
 sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "docker-compose.yml.template" > "docker-compose.yml"
@@ -29,7 +29,6 @@ sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "ngrok.yaml.template
 echo $clean
 echo $new_value
 echo "Value successfully updated! Now use the following commands to start the stack:"
-echo "'sudo apt install docker-compose'"
 echo "'sudo docker login registry.checkmk.com' and enter the credentials."
 echo "'Then:'"
 echo "'sudo docker-compose up -d'"
