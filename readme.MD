@@ -44,7 +44,8 @@ You will only be prompted for the customer name again and not to install Docker.
 
 # Step 3: Start the application stack.
 Start the stack the first time by using the following command.
-    **sudo sh first-start.sh
+    
+    sudo sh first-start.sh
 
 Start the stack after the first time by using the following command.
 
