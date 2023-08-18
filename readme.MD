@@ -43,7 +43,10 @@ If you have made a mistake and need to change the customer name for any reason a
 You will only be prompted for the customer name again and not to install Docker.
 
 # Step 3: Start the application stack.
-Start the stack by using the following command.
+Start the stack the first time by using the following command.
+    sudo sh first-start.sh
+
+Start the stack after the first time by using the following command.
 
     sudo docker-compose up -d
 If you need to stop the stack for any reason then the following command shuts it down again
