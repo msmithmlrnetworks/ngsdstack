@@ -34,7 +34,7 @@ Once in the folder excute the setup script by using the following command.
     Enter the customer name EXACTLY as it appears in Vivantio:
 Then login to the Check MK repository.
 
-    sudo docker login registry.checkmk.com
+    docker login registry.checkmk.com
 That is everything complete and you are now ready to start the stack.
 
 If you have made a mistake and need to change the customer name for any reason after having run the setup.sh script then use the following command to update the configuration.
@@ -45,14 +45,14 @@ You will only be prompted for the customer name again and not to install Docker.
 # Step 3: Start the application stack.
 Start the stack the first time by using the following command.
     
-    sudo sh first-start.sh
+    sh first-start.sh
 
 Start the stack after the first time by using the following command.
 
-    sudo docker-compose up -d
+    docker-compose up -d
 If you need to stop the stack for any reason then the following command shuts it down again
 
-    sudo docker-compose down
+    docker-compose down
 
 
 
