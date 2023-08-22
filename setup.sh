@@ -22,6 +22,7 @@ cp ./config/ngrok/ngrok.yml ~/.config/ngrok/ngrok.yml
 sudo ngrok service install --config config/ngrok/ngrok.yml
 sudo ngrok service start
 sudo apt install docker-compose
+sudo usermod -aG docker $USER
 
 # Replace value in file
 sed "s|old_value|$new_value|g; s|old_engine_value|$clean|g" "docker-compose.yml.template" > "docker-compose.yml"
