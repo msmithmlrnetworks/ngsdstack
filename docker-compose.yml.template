@@ -9,7 +9,7 @@ services:
       /docker-entrypoint.sh"
     image: registry.checkmk.com/enterprise/check-mk-enterprise:2.2.0p4
     tmpfs:
-      - /opt/omd/sites/cmk/tmp:uid=1000,gid=1000
+      - /opt/omd/sites/old_engine_value/tmp:uid=1000,gid=1000
     ulimits:
       nofile: 1024
     volumes:
