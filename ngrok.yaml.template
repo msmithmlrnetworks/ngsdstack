@@ -18,7 +18,4 @@ tunnels:
     proto: tcp
     addr: firefox:5900
     metadata: '{"customerName": "old_value","service": "firefox"}'
-    ip_restriction:
-      allow_cidrs:
-        - 13.41.222.23/32
-        - 5.198.38.87/32
+

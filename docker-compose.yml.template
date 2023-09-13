@@ -46,7 +46,8 @@ services:
       - VNC_PASSWORD=Pa55p0rt
     ports:
       - 5900:5900
-    shm_size: "1gb"
+      - 5800:5800
+    shm_size: "2gb"
     restart: unless-stopped
   ngrok:
     image: ngrok/ngrok:alpine
