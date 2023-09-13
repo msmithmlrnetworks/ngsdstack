@@ -14,3 +14,7 @@ tunnels:
     proto: tcp
     addr: guacd:4822
     metadata: '{"customerName": "old_value","service": "guacd"}'
+  firefox:
+    proto: tcp
+    addr: firefox:5900
+    metadata: '{"customerName": "old_value","service": "firefox"}'
