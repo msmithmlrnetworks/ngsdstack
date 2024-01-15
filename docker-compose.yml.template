@@ -16,7 +16,7 @@ services:
       - ./old_engine_value:/omd/sites
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./ngsd-notification/notifications.py:/omd/sites/old_engine_value/share/check_mk/notifications/notifications.py
+      - ./notifications.py:/omd/sites/old_engine_value/share/check_mk/notifications/notifications.py
     ports:
       - "5000:5000"
       - "6557:6557"
@@ -45,8 +45,8 @@ services:
       - TZ=Etc/UTC
       - VNC_PASSWORD=Pa55p0rt
     ports:
-      - 5900:5900
-      - 5800:5800
+      - "5900:5900"
+      - "5800:5800"
     shm_size: "2gb"
     restart: unless-stopped
   ngrok:
